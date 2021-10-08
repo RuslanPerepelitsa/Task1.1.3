@@ -15,6 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
+        Util.createSessionFactory();
         userService.createUsersTable();
         userService.saveUser(user1.getName(),user1.getLastName(),user1.getAge());
         userService.saveUser(user2.getName(),user2.getLastName(),user2.getAge());

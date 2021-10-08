@@ -13,7 +13,7 @@ import java.util.Properties;
 public class Util {
     private static SessionFactory sessionFactory;
 
-    public static SessionFactory getSessionFactory() {
+    public static void createSessionFactory() {
         if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration();
@@ -35,6 +35,9 @@ public class Util {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
 
